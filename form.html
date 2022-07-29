@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="ROBOTS" content="INDEX,FOLLOW">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style class="main_style">
+        .layout-canvas-g {
+            background-color: #ffffff;
+            border: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 40px;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .layout-canvas-g>.header,
+        .layout-canvas-g>.section,
+        .layout-canvas-g>.footer {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            word-wrap: break-word;
+        }
+
+        .layout-canvas-g>.section {
+            margin: 10px 0;
+        }
+
+        .layout-canvas-g>.section>.columns {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+
+        html,
+        body {
+            background-color: #ffffff !important;
+            color: #000;
+            font-family: Arial;
+            font-size: 12px;
+            margin: 0 auto;
+            padding-top: 0;
+        }
+
+        .fuelux .popover .popover-content {
+            color: red !important;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        form label {
+            display: block;
+            color: #33475b !important;
+            font-size: 13px !important;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 4px !important;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .mobile-hidden {
+                display: none !important;
+            }
+
+            .responsive-td {
+                width: 100% !important;
+                display: block !important;
+                padding: 0 !important;
+            }
+        }
+
+        .layout-canvas-g>.section>.columns {
+            width: 100%;
+        }
+
+        /* Preview Editor styles */
+        .editor-gears-content {
+            /* form styles */
+        }
+
+        .editor-gears-content .hidden {
+            display: none !important;
+        }
+
+        .editor-gears-content .smartcapture-controls {
+            padding: 1em 0;
+        }
+
+        .editor-gears-content .smartcapture-controls>.sc-formfield-label,
+        .editor-gears-content .sc-formfield-input label {
+            display: block;
+            color: #33475b;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 4px;
+        }
+
+        .editor-gears-content .sc-formfield-input input[type="text"],
+        .editor-gears-content .sc-formfield-input input[type="number"],
+        .editor-gears-content .sc-formfield-input input[type="email"],
+        .editor-gears-content .sc-formfield-input select {
+            display: block;
+            width: 100% !important;
+            height: 40px;
+            padding: 9px 10px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #33475b;
+            background-color: #f5f8fa;
+            border: 1px solid #cbd6e2;
+            box-sizing: border-box;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        .editor-gears-content .sc-formfield-input.date-dropdown-select-boxes select {
+            display: inline-block;
+            width: auto;
+            height: 40px;
+            padding: 9px 10px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #33475b;
+            background-color: #f5f8fa;
+            border: 1px solid #cbd6e2;
+            box-sizing: border-box;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        .editor-gears-content button[type="submit"] {
+            background-color: #25408f !important;
+            border: none !important;
+            border-radius: 3px;
+            color: #faf8f8;
+            cursor: pointer;
+            font-family: Open Sans, Arial, Helvetica, sans-serif;
+            line-height: 12px;
+            font-size: 12px;
+            padding: 12px 24px;
+        }
+    </style>
+    <!-- Common Form Styles - Template 1 Theme -->
+    <link rel="stylesheet" href="https://cloud.realestate.colliers.com/common-form-styles-t1">
+
+    <script async="" id="smartcapture-formjs-script"
+    src="https://mc.s12.exacttarget.com/CloudPages/lib/smartcapture-formjs.js"></script>
+  <link id="datepicker-stylesheet" rel="stylesheet" href="https://mc.s12.exacttarget.com/CloudPages/css/datepicker.css">
+  <link id="smartcapture-stylesheet" rel="stylesheet"
+    href="https://mc.s12.exacttarget.com/CloudPages/css/smartcapture-form.css">
+  <script id="jquery-script" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script id="fuel-tracking-script" src="https://mc.s12.exacttarget.com/CloudPages/utilities/t.js" async=""></script>
+  <script id="jquery-ui-script" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js"></script>
+  <script id="fuelux-loader-script" src="https://www.fuelcdn.com/fuelux/2.3/loader.min.js"></script>
+  <script id="bootstrap-datepicker-script" src="https://mc.s12.exacttarget.com/CloudPages/lib/bootstrap-datepicker.js"
+    async=""></script>
+  <script id="jquery-validator-messages"
+    src="https://mc.s12.exacttarget.com/CloudPages/lib/sc-validation-messages/en.js" async=""></script>
+  <script id="jquery-validator-script" src="https://mc.s12.exacttarget.com/CloudPages/lib/jquery.validator.js" async="">
+  </script>
+  <script src="chrome-extension://mhmpepeohaddbhkhecaldflljggicedf/pageContext.js?evg_ext__injected"
+  type="text/javascript"></script>
+
+</head>
+
+<body class="themeB">
+    <div class="layout layout-canvas-g">
+        <div class="section">
+            <div class="columns col1">
+                <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; "
+                    class="stylingblock-content-wrapper">
+                    <tr>
+                        <td class="stylingblock-content-wrapper camarker-inner">
+                            <table cellpadding="0" cellspacing="0" width="100%" role="presentation"
+                                class="stylingblock-content-wrapper" style="min-width: 100%; ">
+                                <tr>
+                                    <td class="stylingblock-content-wrapper camarker-inner">
+                                        <form id="smartcapture-block-8vfprc49k6u"
+                                            class="smartcapture-content-wrapper fuelux" novalidate="novalidate" action="http://cl.s12.exct.net/DEManager.aspx" name="subscribeForm" method="post">
+                                            <input type="hidden" name="_clientID" value="534004372" />
+                                            <input type="hidden" name="_deExternalKey" value="011C1A20-05BD-49E5-A431-9FD55C1675A3" />
+                                            <input type="hidden" name="_action" value="add" />
+                                            <input type="hidden" name="_returnXML" value="0" />
+                                            <input type="hidden" name="_successURL" value="https://cloud.realestate.colliers.com/DestinationPage?message=Success" />
+                                            <input type="hidden" name="_errorURL" value="https://cloud.realestate.colliers.com/DestinationPage?message=Fail" />
+                                            <style id="smartcapture-styles-8vfprc49k6u">
+                                                #smartcapture-block-8vfprc49k6u {
+                                                    background-color: transparent;
+                                                    margin-top: 0px;
+                                                    margin-right: 0px;
+                                                    margin-bottom: 0px;
+                                                    margin-left: 0px;
+                                                    padding-top: 0px;
+                                                    padding-right: 0px;
+                                                    padding-bottom: 0px;
+                                                    padding-left: 0px;
+                                                    text-align: left;
+                                                }
+
+                                                #smartcapture-block-8vfprc49k6u .smartcapture-controls {
+                                                    padding-bottom: 10px;
+                                                }
+
+                                                #smartcapture-block-8vfprc49k6u .smartcapture-controls .sc-formfield-label,
+                                                #smartcapture-block-8vfprc49k6u .smartcapture-controls .sc-formfield-label label,
+                                                #smartcapture-block-8vfprc49k6u .smartcapture-controls .sc-formfield-input label {
+                                                    color: #000000;
+                                                    font-family: Arial, Helvetica, sans-serif;
+                                                    font-size: 16px;
+                                                    line-height: inherit;
+                                                    margin-bottom: 3px;
+                                                    vertical-align: middle;
+                                                }
+
+                                                #smartcapture-block-8vfprc49k6u input[type="radio"],
+                                                #smartcapture-block-8vfprc49k6u input[type="checkbox"] {
+                                                    margin: 0 0.4em 3px 0;
+                                                    vertical-align: middle;
+                                                }
+
+                                                #smartcapture-block-8vfprc49k6u input[type="text"],
+                                                #smartcapture-block-8vfprc49k6u input[type="email"],
+                                                #smartcapture-block-8vfprc49k6u input[type="number"] {
+                                                    width: 200px;
+                                                }
+
+                                                #smartcapture-block-8vfprc49k6u .sc-button {
+                                                    background-color: #009DDC;
+                                                    border-color: #009DDC;
+                                                    border-radius: 3px;
+                                                    border-style: solid;
+                                                    -webkit-border-radius: 3px;
+                                                    -moz-border-radius: 3px;
+                                                    color: #FFFFFF;
+                                                    font-family: Arial, Helvetica, sans-serif;
+                                                    font-size: 16px;
+                                                    line-height: normal;
+                                                    padding: 10px;
+                                                }
+
+                                                #smartcapture-block-8vfprc49k6u .smartcapture-submit-button-wrapper {
+                                                    padding-bottom: 10px;
+                                                    text-align: center;
+                                                }
+
+                                                #smartcapture-block-8vfprc49k6u .date-dropdown-select-boxes input {
+                                                    display: none;
+                                                }
+
+                                                #smartcapture-block-8vfprc49k6u .date-dropdown-select-boxes .select {
+                                                    max-height: 28em;
+                                                    max-width: 6em;
+                                                    overflow: auto;
+                                                }
+                                            </style>
+                                            <table cellpadding="0" cellspacing="0" width="100%" role="presentation"
+                                                style="min-width: 100%; " class="stylingblock-content-wrapper">
+                                                <tr>
+                                                    <td class="stylingblock-content-wrapper camarker-inner">
+                                                        <div class="smartcapture-controls">
+                                                            <div class="sc-formfield-label"><label for="FirstName">First
+                                                                    name *</label></div>
+                                                            <div class="sc-formfield-input"><input type="text"
+                                                                    name="FirstName" data-field-type="Text"
+                                                                    required="required" data-validation-message="">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" width="100%" role="presentation"
+                                                style="min-width: 100%; " class="stylingblock-content-wrapper">
+                                                <tr>
+                                                    <td class="stylingblock-content-wrapper camarker-inner">
+                                                        <div class="smartcapture-controls">
+                                                            <div class="sc-formfield-label"><label for="LastName">Last
+                                                                    name *</label></div>
+                                                            <div class="sc-formfield-input"><input type="text"
+                                                                    name="LastName" data-field-type="Text"
+                                                                    required="required"
+                                                                    data-validation-message="Please fill out this field.">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" width="100%" role="presentation"
+                                                style="min-width: 100%; " class="stylingblock-content-wrapper">
+                                                <tr>
+                                                    <td class="stylingblock-content-wrapper camarker-inner">
+                                                        <div class="smartcapture-controls">
+                                                            <div class="sc-formfield-label"><label
+                                                                    for="EmailAddress">Email *</label></div>
+                                                            <div class="sc-formfield-input"><input type="email"
+                                                                    name="EmailAddress" data-field-type="EmailAddress"
+                                                                    data-validation="email" required="required"
+                                                                    data-validation-message="Please enter an email address.">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" width="100%" role="presentation"
+                                                style="min-width: 100%; " class="stylingblock-content-wrapper">
+                                                <tr>
+                                                    <td class="stylingblock-content-wrapper camarker-inner">
+                                                        <div class="smartcapture-controls">
+                                                            <div class="sc-formfield-label"><label
+                                                                    for="PhoneNumber">Phone number *</label></div>
+                                                            <div class="sc-formfield-input"><input type="text"
+                                                                    name="PhoneNumber" data-field-type="Phone"
+                                                                    required="required"
+                                                                    data-validation-message="Please fill out this field.">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" width="100%" role="presentation"
+                                                style="min-width: 100%; " class="stylingblock-content-wrapper">
+                                                <tr>
+                                                    <td class="stylingblock-content-wrapper camarker-inner">
+                                                        <div class="smartcapture-controls">
+                                                            <div class="sc-formfield-label"><label
+                                                                    for="PostCode">Postcode *</label></div>
+                                                            <div class="sc-formfield-input"><input type="text"
+                                                                    name="PostCode" data-field-type="Number"
+                                                                    data-validation="number" required="required"
+                                                                    data-validation-message="Please enter a number.">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" width="100%" role="presentation"
+                                                style="min-width: 100%; " class="stylingblock-content-wrapper">
+                                                <tr>
+                                                    <td class="stylingblock-content-wrapper camarker-inner">
+                                                        <div class="smartcapture-controls">
+                                                            <div class="sc-formfield-label"><label
+                                                                    for="HowDidYouHearAboutUs">How did you hear about
+                                                                    us? *</label></div>
+                                                            <div class="sc-formfield-input"><select
+                                                                    name="HowDidYouHearAboutUs" data-field-type="Text"
+                                                                    required="required"
+                                                                    data-validation-message="Please fill out this field.">
+                                                                    <option value="" selected="selected"></option>
+                                                                    <option
+                                                                        value="Communications - Colliers International E-comms">
+                                                                        Communications - Colliers International E-comms
+                                                                    </option>
+                                                                    <option value="Communications - Direct Mail">
+                                                                        Communications - Direct Mail</option>
+                                                                    <option value="Online - Domain.com.au">Online -
+                                                                        Domain.com.au</option>
+                                                                    <option value="Online - Facebook">Online - Facebook
+                                                                    </option>
+                                                                    <option value="Online - Realestate.com.au">Online -
+                                                                        Realestate.com.au</option>
+                                                                    <option value="Online - Search online">Online -
+                                                                        Search online</option>
+                                                                    <option value="Online - Urban.com.au">Online -
+                                                                        Urban.com.au</option>
+                                                                    <option
+                                                                        value="Online - Apartmentdevelopments.com.au">
+                                                                        Online - Apartmentdevelopments.com.au</option>
+                                                                    <option value="Online - Referral">Online - Referral
+                                                                    </option>
+                                                                    <option value="Press - Gold Coast Bulletin">Press -
+                                                                        Gold Coast Bulletin</option>
+                                                                    <option value="Signage - Signboard">Signage -
+                                                                        Signboard</option>
+                                                                    <option value="Other - Referral">Other - Referral
+                                                                    </option>
+                                                                </select></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div class="smartcapture-submit-button-wrapper"><button type="submit"
+                                                    class="sc-button">Submit</button></div>
+                                            <script id="smartcapture-script-8vfprc49k6u">var scFormLoaded = function () {
+                                                    window.ScForm.init({
+                                                        "gearID": "8vfprc49k6u", "smartCaptureFormID": 0, "sourceKey": "011C1A20-05BD-49E5-A431-9FD55C1675A3", "source": "dataExtension", "triggeredSend": "", "confirmationMessage": "", "buttonText": "Submit", "formStyling": {
+                                                            "background-color": "transparent", "margin-top": "0px", "margin-right": "0px", "margin-bottom": "0px", "margin-left": "0px", "padding-top": "0px", "padding-right": "0px", "padding-bottom": "0px", "padding-left": "0px", "text-align": "left"
+                                                        }
+
+                                                        , "fieldStyling": {
+                                                            "width": "200px"
+                                                        }
+
+                                                        , "buttonStyling": {
+                                                            "background-color": "#009DDC", "border-color": "#009DDC", "border-radius": "3px", "border-style": "solid", "-webkit-border-radius": "3px", "-moz-border-radius": "3px", "color": "#FFFFFF", "font-family": "Arial, Helvetica, sans-serif", "font-size": "16px", "line-height": "normal", "padding": "10px"
+                                                        }
+
+                                                        , "onSubmitShouldGotoUrl": true, "onSubmitGotoUrlType": 2, "onSubmitGotoUrl": "http://www.harbourshores.com.au/"
+                                                    });
+                                                }
+
+                                                    ;
+                                                window.appDomain = window.appDomain || '' || 'mc.s12.exacttarget.com';
+
+                                                window.contentDetail = window.contentDetail || {
+                                                    "isSite": true, "mid": 534004372, "eid": 534003069, "pageID": 3892, "siteID": 171495, "isMobile": "false"
+                                                }
+
+                                                    ;
+
+                                                if (!window.ScForm || !window.ScForm.init) {
+                                                    var head = document.getElementsByTagName('head')[0];
+                                                    var id = 'smartcapture-formjs-script';
+                                                    var script = document.getElementById(id);
+                                                    var domain = window.appDomain;
+                                                    var el;
+
+                                                    if (!script) {
+                                                        if (domain) {
+                                                            domain = '//' + domain;
+                                                        }
+
+                                                        el = document.createElement('script');
+                                                        el.async = true;
+                                                        el.id = id;
+                                                        el.src = domain + '/CloudPages/lib/smartcapture-formjs.js';
+                                                        el.onload = scFormLoaded;
+                                                        head.appendChild(el);
+                                                    }
+
+                                                    else {
+                                                        if (script.addEventListener) {
+                                                            script.addEventListener('load', scFormLoaded);
+                                                        }
+
+                                                        else if (script.attachEvent) {
+                                                            script.attachEvent('onload', scFormLoaded);
+                                                        }
+                                                    }
+                                                }
+
+                                                else {
+                                                    scFormLoaded();
+                                                }
+
+                                            </script><input name="Form_Originating_Country" type="hidden" value="AU"><input name="utm_campaign" type="hidden"
+                                                value=""><input name="utm_cid" type="hidden" value=""><input
+                                                name="utm_content" type="hidden" value=""><input name="utm_medium"
+                                                type="hidden" value=""><input name="utm_source" type="hidden"
+                                                value=""><input name="utm_term" type="hidden" value=""><input
+                                                name="Form_Name" type="hidden"
+                                                value="20220727_Residential_Harbour Shores_webform_iFrame"><input
+                                                name="ProjectID" type="hidden" value="1000000657">
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <style>
+                    .fuelux input[type=text],
+                    .fuelux input[type=number],
+                    .fuelux input[type=email] {
+                        height: 40px !important;
+                    }
+
+                    .sc-button,
+                    button[type="submit"] {
+                        background-color: #25408f !important;
+                        border: none !important;
+                        border-radius: 3px;
+                        color: #faf8f8;
+                        cursor: pointer;
+                        font-family: Open Sans, Arial, Helvetica, sans-serif;
+                        line-height: 12px;
+                        font-size: 12px;
+                        padding: 12px 24px;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+    <script src="https://cloud.realestate.colliers.com/Form_Script"></script>
+    <script>
+        Array.from(document.getElementsByClassName('smartcapture-content-wrapper')).forEach(e=>{
+          e.addEventListener('submit',function(ev){
+              event.preventDefault();
+              if(event.target.checkValidity()){
+                Array.from(e.elements).forEach(ele=>{
+                  if(ele.type == "checkbox"){
+                    ele.value = ele.checked;
+                  }
+                })
+                event.target.submit();
+              }
+          })
+        })
+      </script>
+    
+</body>
+
+</html>
